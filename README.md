@@ -1,24 +1,24 @@
 # MERN Skeleton
 
-A skeleton application with basic user CRUD and auth features - developed using React, Node, Express and MongoDB. 
+A skeleton application with basic user CRUD and auth features - developed using React, Node, Express and MongoDB.
 
 ![MERN Skeleton](https://s3.amazonaws.com/mernbook/git+/skeleton.png "MERN Skeleton")
 
 ### [Live Demo](http://skeleton.mernbook.com/ "MERN Skeleton")
 
 #### What you need to run this code
-1. Node (8.11.1)
-2. NPM (5.8.0)
-3. MongoDB (3.6.3)
+1. Node (10.15.0)
+2. NPM (6.4.1)
+3. MongoDB (4.0.3)
 
 ####  How to run this code
-1. Make sure MongoDB is running on your system 
+1. Make sure MongoDB is running on your system
 2. Clone this repository
-3. Open command line in the cloned folder, 
+3. Open command line in the cloned folder,
    - To install dependencies, run ```  npm install  ```
    - To run the application for development, run ```  npm run development  ```
 4. Open [localhost:3000](http://localhost:3000/) in the browser
----- 
+----
 ### More applications built by extending this skeleton
 
 * [MERN Social](https://github.com/shamahoque/mern-social)
