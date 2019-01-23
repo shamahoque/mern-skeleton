@@ -13,12 +13,12 @@ import authRoutes from './routes/auth.routes'
 import React from 'react'
 import ReactDOMServer from 'react-dom/server'
 import MainRouter from './../client/MainRouter'
-import StaticRouter from 'react-router-dom/StaticRouter'
+import { StaticRouter } from 'react-router-dom'
 
-import { SheetsRegistry } from 'react-jss/lib/jss'
+import { SheetsRegistry } from 'jss'
 import JssProvider from 'react-jss/lib/JssProvider'
-import { MuiThemeProvider, createMuiTheme, createGenerateClassName } from 'material-ui/styles'
-import { indigo, pink } from 'material-ui/colors'
+import { MuiThemeProvider, createMuiTheme, createGenerateClassName } from '@material-ui/core/styles'
+import { indigo, pink } from '@material-ui/core/colors'
 //end
 
 //comment out before building for production
@@ -48,7 +48,12 @@ app.use('/', authRoutes)
 
 app.get('*', (req, res) => {
    const sheetsRegistry = new SheetsRegistry()
+   // Create a sheetsManager instance.
+   const sheetsManager = new Map()
    const theme = createMuiTheme({
+     typography: {
+       useNextVariants: true,
+    },
      palette: {
        primary: {
        light: '#757de8',
@@ -72,7 +77,7 @@ app.get('*', (req, res) => {
    const markup = ReactDOMServer.renderToString(
       <StaticRouter location={req.url} context={context}>
          <JssProvider registry={sheetsRegistry} generateClassName={generateClassName}>
-            <MuiThemeProvider theme={theme} sheetsManager={new Map()}>
+            <MuiThemeProvider theme={theme} sheetsManager={sheetsManager}>
               <MainRouter/>
             </MuiThemeProvider>
          </JssProvider>
@@ -92,6 +97,9 @@ app.get('*', (req, res) => {
 app.use((err, req, res, next) => {
   if (err.name === 'UnauthorizedError') {
     res.status(401).json({"error" : err.name + ": " + err.message})
+  }else if (err) {
+    res.status(400).json({"error" : err.name + ": " + err.message})
+    console.log(err)
   }
 })
 

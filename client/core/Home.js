@@ -1,8 +1,10 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types'
-import {withStyles} from 'material-ui/styles'
-import Card, {CardContent, CardMedia} from 'material-ui/Card'
-import Typography from 'material-ui/Typography'
+import withStyles from '@material-ui/core/styles/withStyles'
+import Card from '@material-ui/core/Card'
+import CardContent from '@material-ui/core/CardContent'
+import CardMedia from '@material-ui/core/CardMedia'
+import Typography from '@material-ui/core/Typography'
 import seashellImg from './../assets/images/seashell.jpg'
 
 const styles = theme => ({
@@ -25,12 +27,12 @@ class Home extends Component {
     const {classes} = this.props
     return (
         <Card className={classes.card}>
-          <Typography type="headline" component="h2" className={classes.title}>
+          <Typography variant="h6" className={classes.title}>
             Home Page
           </Typography>
           <CardMedia className={classes.media} image={seashellImg} title="Unicorn Shells"/>
           <CardContent>
-            <Typography type="body1" component="p">
+            <Typography variant="body2" component="p">
               Welcome to the MERN Skeleton home page.
             </Typography>
           </CardContent>

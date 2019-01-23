@@ -1,13 +1,19 @@
 import React, {Component} from 'react'
-import Card, {CardActions, CardContent} from 'material-ui/Card'
-import Button from 'material-ui/Button'
-import TextField from 'material-ui/TextField'
-import Typography from 'material-ui/Typography'
-import Icon from 'material-ui/Icon'
+import Card from '@material-ui/core/Card'
+import CardActions from '@material-ui/core/CardActions'
+import CardContent from '@material-ui/core/CardContent'
+import Button from '@material-ui/core/Button'
+import TextField from '@material-ui/core/TextField'
+import Typography from '@material-ui/core/Typography'
+import Icon from '@material-ui/core/Icon'
 import PropTypes from 'prop-types'
-import {withStyles} from 'material-ui/styles'
+import withStyles from '@material-ui/core/styles/withStyles'
 import {create} from './api-user.js'
-import Dialog, {DialogActions, DialogContent, DialogContentText, DialogTitle} from 'material-ui/Dialog'
+import Dialog from '@material-ui/core/Dialog'
+import DialogActions from '@material-ui/core/DialogActions'
+import DialogContent from '@material-ui/core/DialogContent'
+import DialogContentText from '@material-ui/core/DialogContentText'
+import DialogTitle from '@material-ui/core/DialogTitle'
 import {Link} from 'react-router-dom'
 
 const styles = theme => ({
@@ -69,7 +75,7 @@ class Signup extends Component {
     return (<div>
       <Card className={classes.card}>
         <CardContent>
-          <Typography type="headline" component="h2" className={classes.title}>
+          <Typography variant="h6" className={classes.title}>
             Sign Up
           </Typography>
           <TextField id="name" label="Name" className={classes.textField} value={this.state.name} onChange={this.handleChange('name')} margin="normal"/><br/>
@@ -82,7 +88,7 @@ class Signup extends Component {
           }
         </CardContent>
         <CardActions>
-          <Button color="primary" variant="raised" onClick={this.clickSubmit} className={classes.submit}>Submit</Button>
+          <Button color="primary" variant="contained" onClick={this.clickSubmit} className={classes.submit}>Submit</Button>
         </CardActions>
       </Card>
       <Dialog open={this.state.open} disableBackdropClick={true}>
@@ -94,7 +100,7 @@ class Signup extends Component {
         </DialogContent>
         <DialogActions>
           <Link to="/signin">
-            <Button color="primary" autoFocus="autoFocus" variant="raised">
+            <Button color="primary" autoFocus="autoFocus" variant="contained">
               Sign In
             </Button>
           </Link>

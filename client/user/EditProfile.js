@@ -1,11 +1,13 @@
 import React, {Component} from 'react'
-import Card, {CardActions, CardContent} from 'material-ui/Card'
-import Button from 'material-ui/Button'
-import TextField from 'material-ui/TextField'
-import Typography from 'material-ui/Typography'
-import Icon from 'material-ui/Icon'
+import Card from '@material-ui/core/Card'
+import CardActions from '@material-ui/core/CardActions'
+import CardContent from '@material-ui/core/CardContent'
+import Button from '@material-ui/core/Button'
+import TextField from '@material-ui/core/TextField'
+import Typography from '@material-ui/core/Typography'
+import Icon from '@material-ui/core/Icon'
 import PropTypes from 'prop-types'
-import {withStyles} from 'material-ui/styles'
+import withStyles from '@material-ui/core/styles/withStyles'
 import auth from './../auth/auth-helper'
 import {read, update} from './api-user.js'
 import {Redirect} from 'react-router-dom'
@@ -91,7 +93,7 @@ class EditProfile extends Component {
     return (
       <Card className={classes.card}>
         <CardContent>
-          <Typography type="headline" component="h2" className={classes.title}>
+          <Typography variant="h6" className={classes.title}>
             Edit Profile
           </Typography>
           <TextField id="name" label="Name" className={classes.textField} value={this.state.name} onChange={this.handleChange('name')} margin="normal"/><br/>
@@ -105,7 +107,7 @@ class EditProfile extends Component {
           }
         </CardContent>
         <CardActions>
-          <Button color="primary" variant="raised" onClick={this.clickSubmit} className={classes.submit}>Submit</Button>
+          <Button color="primary" variant="contained" onClick={this.clickSubmit} className={classes.submit}>Submit</Button>
         </CardActions>
       </Card>
     )
