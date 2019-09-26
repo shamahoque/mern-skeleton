@@ -52,13 +52,11 @@
     "express-jwt": "^5.3.1",
     "helmet": "^3.21.0",
     "jsonwebtoken": "^8.5.1",
-    "jss": "^9.8.7",
     "lodash": "^4.17.15",
     "mongoose": "^5.7.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-hot-loader": "^4.12.13",
-    "react-jss": "^8.6.1",
     "react-router": "^5.0.1",
     "react-router-dom": "^5.0.1"
   }
