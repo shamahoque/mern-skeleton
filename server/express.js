@@ -15,10 +15,8 @@ import ReactDOMServer from 'react-dom/server'
 import MainRouter from './../client/MainRouter'
 import { StaticRouter } from 'react-router-dom'
 
-import { SheetsRegistry } from 'jss'
-import JssProvider from 'react-jss/lib/JssProvider'
-import { MuiThemeProvider, createMuiTheme, createGenerateClassName } from '@material-ui/core/styles'
-import { indigo, pink } from '@material-ui/core/colors'
+import { ServerStyleSheets, ThemeProvider } from '@material-ui/styles'
+import theme from './../client/theme'
 //end
 
 //comment out before building for production
@@ -47,46 +45,22 @@ app.use('/', userRoutes)
 app.use('/', authRoutes)
 
 app.get('*', (req, res) => {
-   const sheetsRegistry = new SheetsRegistry()
-   // Create a sheetsManager instance.
-   const sheetsManager = new Map()
-   const theme = createMuiTheme({
-     typography: {
-       useNextVariants: true,
-    },
-     palette: {
-       primary: {
-       light: '#757de8',
-       main: '#3f51b5',
-       dark: '#002984',
-       contrastText: '#fff',
-     },
-     secondary: {
-       light: '#ff79b0',
-       main: '#ff4081',
-       dark: '#c60055',
-       contrastText: '#000',
-     },
-       openTitle: indigo['400'],
-       protectedTitle: pink['400'],
-       type: 'light'
-     },
-   })
-   const generateClassName = createGenerateClassName()
+  const sheets = new ServerStyleSheets()
+   
    const context = {}
    const markup = ReactDOMServer.renderToString(
-      <StaticRouter location={req.url} context={context}>
-         <JssProvider registry={sheetsRegistry} generateClassName={generateClassName}>
-            <MuiThemeProvider theme={theme} sheetsManager={sheetsManager}>
-              <MainRouter/>
-            </MuiThemeProvider>
-         </JssProvider>
-      </StaticRouter>
-     )
+    sheets.collect(
+          <StaticRouter location={req.url} context={context}>
+            <ThemeProvider theme={theme}>
+              <MainRouter />
+            </ThemeProvider>
+          </StaticRouter>
+        )
+    )
     if (context.url) {
       return res.redirect(303, context.url)
     }
-    const css = sheetsRegistry.toString()
+    const css = sheets.toString()
     res.status(200).send(Template({
       markup: markup,
       css: css
