@@ -38,8 +38,8 @@ const useStyles = makeStyles(theme => ({
 }))
 
 export default function EditProfile({ match }) {
-  const classes = useStyles();
-  const [values, setValues] = React.useState({
+  const classes = useStyles()
+  const [values, setValues] = useState({
     name: '',
     password: '',
     email: '',

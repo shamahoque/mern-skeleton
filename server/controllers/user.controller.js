@@ -71,7 +71,7 @@ const update = async (req, res) => {
 const remove = async (req, res) => {
   try {
     let user = req.profile
-    let deletedUse = await user.remove()
+    let deletedUser = await user.remove()
     deletedUser.hashed_password = undefined
     deletedUser.salt = undefined
     res.json(deletedUser)

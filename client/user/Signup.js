@@ -42,8 +42,8 @@ const useStyles = makeStyles(theme => ({
 }))
 
 export default function Signup() {
-  const classes = useStyles();
-  const [values, setValues] = React.useState({
+  const classes = useStyles()
+  const [values, setValues] = useState({
     name: '',
     password: '',
     email: '',

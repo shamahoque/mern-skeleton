@@ -8,7 +8,6 @@ import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction'
 import ListItemText from '@material-ui/core/ListItemText'
 import Avatar from '@material-ui/core/Avatar'
 import IconButton from '@material-ui/core/IconButton'
-import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography'
 import Edit from '@material-ui/icons/Edit'
 import Person from '@material-ui/icons/Person'
@@ -32,9 +31,9 @@ const useStyles = makeStyles(theme => ({
 }))
 
 export default function Profile({ match }) {
-  const classes = useStyles();
+  const classes = useStyles()
   const [user, setUser] = useState({})
-  const [redirectToSignin, setredirectToSignin] = useState(false)
+  const [redirectToSignin, setRedirectToSignin] = useState(false)
   const jwt = auth.isAuthenticated()
 
   useEffect(() => {
@@ -45,7 +44,7 @@ export default function Profile({ match }) {
       userId: match.params.userId
     }, {t: jwt.token}, signal).then((data) => {
       if (data && data.error) {
-        setredirectToSignin(true)
+        setRedirectToSignin(true)
       } else {
         setUser(data)
       }
