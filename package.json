@@ -18,9 +18,7 @@
   "homepage": "https://github.com/shamahoque/mern-skeleton",
   "main": "./dist/server.generated.js",
   "scripts": {
-    "development": "nodemon",
-    "build": "webpack --config webpack.config.client.production.js && webpack --mode=production --config webpack.config.server.js",
-    "start": "NODE_ENV=production node ./dist/server.generated.js"
+    "development": "nodemon"
   },
   "engines": {
     "node": "12.11.1",
@@ -29,21 +27,13 @@
   "devDependencies": {
     "@babel/core": "^7.6.4",
     "@babel/preset-env": "^7.6.3",
-    "@babel/preset-react": "^7.6.3",
     "babel-loader": "^8.0.6",
-    "file-loader": "^4.2.0",
     "nodemon": "^1.19.4",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.9",
-    "webpack-dev-middleware": "^3.7.2",
-    "webpack-hot-middleware": "^2.25.0",
     "webpack-node-externals": "^1.7.2"
   },
   "dependencies": {
-    "@hot-loader/react-dom": "^16.10.2",
-    "@material-ui/core": "^4.5.1",
-    "@material-ui/icons": "^4.5.1",
-    "@material-ui/styles": "^4.5.0",
     "body-parser": "^1.19.0",
     "compression": "^1.7.4",
     "cookie-parser": "^1.4.4",
@@ -53,11 +43,6 @@
     "helmet": "^3.21.2",
     "jsonwebtoken": "^8.5.1",
     "lodash": "^4.17.15",
-    "mongoose": "^5.7.7",
-    "react": "^16.11.0",
-    "react-dom": "^16.11.0",
-    "react-hot-loader": "^4.12.15",
-    "react-router": "^5.1.2",
-    "react-router-dom": "^5.1.2"
+    "mongoose": "^5.7.7"
   }
 }
