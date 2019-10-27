@@ -7,8 +7,8 @@ A skeleton application with basic user CRUD and auth features - developed using 
 ### [Live Demo](http://skeleton.mernbook.com/ "MERN Skeleton")
 
 #### What you need to run this code
-1. Node (12.10.0)
-2. NPM (6.10.3)
+1. Node (12.11.1)
+2. NPM (6.11.3)
 3. MongoDB (4.2.0)
 
 ####  How to run this code
