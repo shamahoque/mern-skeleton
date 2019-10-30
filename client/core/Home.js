@@ -4,7 +4,7 @@ import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
 import CardMedia from '@material-ui/core/CardMedia'
 import Typography from '@material-ui/core/Typography'
-import seashellImg from './../assets/images/seashell.jpg'
+import unicornbikeImg from './../assets/images/unicornbike.jpg'
 
 const useStyles = makeStyles(theme => ({
   card: {
@@ -14,10 +14,19 @@ const useStyles = makeStyles(theme => ({
   },
   title: {
     padding:`${theme.spacing(3)}px ${theme.spacing(2.5)}px ${theme.spacing(2)}px`,
-    color: theme.palette.text.secondary
+    color: theme.palette.openTitle
   },
   media: {
-    minHeight: 330
+    minHeight: 400
+  },
+  credit: {
+    padding: 10,
+    textAlign: 'right',
+    backgroundColor: '#ededed',
+    borderBottom: '1px solid #d0d0d0',
+    '& a':{
+      color: '#3f4771'
+    } 
   }
 }))
 
@@ -28,7 +37,8 @@ export default function Home(){
           <Typography variant="h6" className={classes.title}>
             Home Page
           </Typography>
-          <CardMedia className={classes.media} image={seashellImg} title="Unicorn Shells"/>
+          <CardMedia className={classes.media} image={unicornbikeImg} title="Unicorn Bicycle"/>
+          <Typography variant="body2" component="p" className={classes.credit} color="textSecondary">Photo by <a href="https://unsplash.com/@boudewijn_huysmans" target="_blank" rel="noopener noreferrer">Boudewijn Huysmans</a> on Unsplash</Typography>
           <CardContent>
             <Typography variant="body2" component="p">
               Welcome to the MERN Skeleton home page.
