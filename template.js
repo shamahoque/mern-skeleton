@@ -12,7 +12,8 @@ export default ({markup, css}) => {
           <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
           <style>
               a{
-                text-decoration: none
+                text-decoration: none;
+                color: #061d95
               }
           </style>
         </head>

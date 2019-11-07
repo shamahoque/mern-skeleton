@@ -38,7 +38,7 @@ const useStyles = makeStyles(theme => ({
 }))
 
 export default function Signin(props) {
-  const classes = useStyles();
+  const classes = useStyles()
   const [values, setValues] = useState({
       email: '',
       password: '',
@@ -73,14 +73,14 @@ export default function Signin(props) {
       }
   }
   const {redirectToReferrer} = values
-    if (redirectToReferrer) {
+  if (redirectToReferrer) {
       return (<Redirect to={from}/>)
   }
 
   return (
       <Card className={classes.card}>
         <CardContent>
-          <Typography variant="h5" className={classes.title}>
+          <Typography variant="h6" className={classes.title}>
             Sign In
           </Typography>
           <TextField id="email" type="email" label="Email" className={classes.textField} value={values.email} onChange={handleChange('email')} margin="normal"/><br/>

@@ -10,7 +10,8 @@ const useStyles = makeStyles(theme => ({
   card: {
     maxWidth: 600,
     margin: 'auto',
-    marginTop: theme.spacing(5)
+    marginTop: theme.spacing(5),
+    marginBottom: theme.spacing(5)
   },
   title: {
     padding:`${theme.spacing(3)}px ${theme.spacing(2.5)}px ${theme.spacing(2)}px`,
@@ -31,7 +32,7 @@ const useStyles = makeStyles(theme => ({
 }))
 
 export default function Home(){
-  const classes = useStyles();
+  const classes = useStyles()
     return (
         <Card className={classes.card}>
           <Typography variant="h6" className={classes.title}>
@@ -40,7 +41,7 @@ export default function Home(){
           <CardMedia className={classes.media} image={unicornbikeImg} title="Unicorn Bicycle"/>
           <Typography variant="body2" component="p" className={classes.credit} color="textSecondary">Photo by <a href="https://unsplash.com/@boudewijn_huysmans" target="_blank" rel="noopener noreferrer">Boudewijn Huysmans</a> on Unsplash</Typography>
           <CardContent>
-            <Typography variant="body2" component="p">
+            <Typography variant="body1" component="p">
               Welcome to the MERN Skeleton home page.
             </Typography>
           </CardContent>
