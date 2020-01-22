@@ -23,8 +23,8 @@
     "start": "NODE_ENV=production node ./dist/server.generated.js"
   },
   "engines": {
-    "node": "12.11.1",
-    "npm": "6.11.3"
+    "node": "13.7.0",
+    "npm": "6.13.6"
   },
   "devDependencies": {
     "@babel/core": "^7.8.3",
