@@ -1,5 +1,5 @@
 import User from '../models/user.model'
-import _ from 'lodash'
+import extend from 'lodash/extend'
 import errorHandler from './../helpers/dbErrorHandler'
 
 const create = async (req, res) => {
@@ -55,7 +55,7 @@ const list = async (req, res) => {
 const update = async (req, res) => {
   try {
     let user = req.profile
-    user = _.extend(user, req.body)
+    user = extend(user, fields)
     user.updated = Date.now()
     await user.save()
     user.hashed_password = undefined
