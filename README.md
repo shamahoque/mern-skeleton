@@ -29,7 +29,7 @@ A skeleton application with basic user CRUD and auth features - developed using 
 * [MERN VR Game](https://github.com/shamahoque/mern-vrgame/tree/second-edition)
 ----
 ## Get the book
-#### [Full-Stack React Projects - Second Edition](https://www.packtpub.com/web-development/full-stack-react-projects)
+#### [Full-Stack React Projects - Second Edition](https://www.packtpub.com/web-development/full-stack-react-projects-second-edition)
 *Build real-world modern web apps with the MERN stack from scratch*
 
 <a href="https://www.packtpub.com/web-development/full-stack-react-projects-second-edition"><img src="https://mernbook.s3.amazonaws.com/git+/Book_2ndEd.jpg" align="center" width="400" alt="Full-Stack React Projects"></a>
