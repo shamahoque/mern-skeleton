@@ -1,4 +1,5 @@
-# MERN Skeleton
+# MERN Skeleton 2.0
+- *Looking for the first edition code? [Check here](https://github.com/shamahoque/mern-skeleton/tree/master)*
 
 A skeleton application with basic user CRUD and auth features - developed using React, Node, Express and MongoDB.
 
