@@ -28,6 +28,9 @@ A skeleton application with basic user CRUD and auth features - developed using 
 * [MERN Expense Tracker](https://github.com/shamahoque/mern-expense-tracker)
 * [MERN Mediastream](https://github.com/shamahoque/mern-mediastream/tree/second-edition)
 * [MERN VR Game](https://github.com/shamahoque/mern-vrgame/tree/second-edition)
+
+Learn more at [mernbook.com](http://www.mernbook.com/)
+
 ----
 ## Get the book
 #### [Full-Stack React Projects - Second Edition](https://www.packtpub.com/web-development/full-stack-react-projects-second-edition)
